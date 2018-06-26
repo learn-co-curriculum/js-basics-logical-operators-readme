@@ -1,23 +1,18 @@
 # JavaScript Logical Operators
 
-## Overview
+## Problem Statement
 In this lesson, we'll learn how to negate and combine expressions with
 JavaScript's three logical operators: NOT (`!`), AND (`&&`), and OR (`||`).
 
-<picture>
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/logical.webp" type="image/webp">
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/logical.gif" type="image/gif">
-  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/logical.gif" alt="Logical.">
-</picture>
-
 ## Objectives
-1. Invert the truthiness of an expression with the `!` operator.
-2. Convert an expression into its boolean equivalent with a double bang (`!!`).
-3. Combine conditions with the `&&` and `||` operators.
+1. Use `!` to negate an expression
+2. Convert an expression to a boolean using `!!`
+3. Link conditions with the `&&` and `||` operators
 
-## NOT
-The logical NOT operator (`!`), also called the _bang operator_, operates on a
-single expression, returning the inverse of the expression's truthiness. If `x`
+## Use `!` to Negate an Expression
+### `!` NOT
+The logical NOT operator (`!`), also called the _bang operator_, operates on an
+expression, returning the opposite of the expression's truthiness. If `x`
 resolves to a truthy value, `!x` returns `false`. If `x` is falsy, `!x` returns
 `true`:
 
@@ -33,11 +28,12 @@ const falsyValue = 0;
 // => true
 ```
 
-### Boolean shortcut
+## Convert an Expression to a Boolean Using `!!`
+### `!!`
 In the lesson on conditional statements, we passed values into the `Boolean()`
 _constructor function_ to check their truthiness. We'll learn all about
 constructor functions later in the course; for now, just think of it as a
-factory that optionally takes in some input, _constructs_ a new boolean from
+function that takes in some input, creates a new boolean from
 that input, and outputs the created boolean.
 
 As a shorter way to convert any value into a boolean, we can use two NOT
@@ -67,13 +63,8 @@ NOT operator. See what happens when you stack a ton of them: `!!!!!!!!!truthyVal
 
 On to the next!
 
-<picture>
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/not.webp" type="image/webp">
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/not.gif" type="image/gif">
-  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/not.gif" alt="Not!">
-</picture>
-
-## AND
+## Combine Conditions With the `&&` and `||` Operators
+### && `AND`
 The logical AND (`&&`) operator takes two expressions:
 
 ```js
@@ -110,7 +101,7 @@ true && false
 // => 81
 ```
 
-There are effectively three outcomes for the `&&` operator:
+There are three different ways the `&&` operator can be evaluated:
 
 | Left side |   Right side   | Return value | Truthiness of return value |
 |-----------|----------------|--------------|----------------------------|
@@ -118,12 +109,14 @@ There are effectively three outcomes for the `&&` operator:
 |   Truthy  |     Falsy      |  Right side  |           Falsy            |
 |   Truthy  |     Truthy     |  Right side  |           Truthy           |
 
-If the left-side expression is falsy, the right-side expression doesn't matter
-at all. The `&&` operator returns the left side's falsy value and finishes. If
-the left-side expression is truthy, the `&&` operator returns the right side's
-value (whether it's truthy or falsy) and finishes. This is a bit hard to
-explain in text, so make sure you're testing all of these new operators out in
-your browser's JavaScript console to get a feel for how they work.
+1. If the left-side expression is falsy, the right-side expression doesn't matter
+at all. The `&&` operator returns the left side's falsy value and finishes. 
+2. If the left-side expression is truthy, the `&&` operator returns the right side's
+value (whether it's truthy or falsy) and finishes. 
+If you're feeling a little confused, that's ok. This is one of those concepts
+that's a a bit hard to understand unless you've played around with it in code,
+so make sure you're testing all of these new operators out in your browser's
+JavaScript console to get a feel for how they work.
 
 ## OR
 The logical OR (`||`) operator also takes two expressions:
@@ -162,7 +155,7 @@ false || 'Whatever'
 // => "Not an empty string"
 ```
 
-There are effectively three outcomes for the `||` operator:
+There are three different ways the `||` operator can be evaluated:
 
 | Left side |   Right side   | Return value | Truthiness of return value |
 |-----------|----------------|--------------|----------------------------|
@@ -170,14 +163,14 @@ There are effectively three outcomes for the `||` operator:
 |   Falsy   |     Truthy     |  Right side  |           Truthy           |
 |   Falsy   |     Falsy      |  Right side  |           Falsy            |
 
-If the left-side expression is truthy, the right-side expression doesn't matter
+1. If the left-side expression is truthy, the right-side expression doesn't matter
 at all. The `||` operator returns the left side's truthy value and completes.
-If the left-side expression is falsy, the `||` operator returns the right side's
-value (regardless of whether it's truthy or falsy) and completes. As with the
-`&&` operator, make sure you're testing out all of these outcomes in your
+2. If the left-side expression is falsy, the `||` operator returns the right side's
+value (regardless of whether it's truthy or falsy) and completes. 
+As with the `&&` operator, make sure you're testing out all of these outcomes in your
 browser's JS console!
 
-## Linking conditions
+## Link Conditions with the `&&` and `||` Operators
 The `&&` and `||` operators are often used to link multiple conditions in a
 conditional statement:
 
@@ -211,11 +204,8 @@ if (message === 'Please sign in.' || message === 'Link up with your friends to g
 // => "blue"
 ```
 
-<picture>
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/thats_logic.webp" type="image/webp">
-  <source srcset="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/thats_logic.gif" type="image/gif">
-  <img src="https://curriculum-content.s3.amazonaws.com/web-development/js/basics/logical-operators-readme/thats_logic.gif" alt="That's logic!">
-</picture>
+## Conclucion 
+Logical operators in Javascript are the powerful backbone on which most website logic is based. Once you understand how to control the different options available to you, the sky's the limit!
 
 ## Resources
 - MDN
