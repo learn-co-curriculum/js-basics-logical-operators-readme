@@ -197,9 +197,9 @@ if (user && friendCount) {
 	}!`;
 } else {
 	if (user) {
-		message = 'Please sign in.';
-	} else {
 		message = 'Link up with your friends to get the most out of Flatbook!';
+	} else {
+		message = 'Please sign in.';
 	}
 }
 // => "Hi Charles Babbage! You have 3 friends!"
